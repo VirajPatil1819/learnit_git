@@ -1,0 +1,20 @@
+
+
+There are four type of drivers used to convert JDBC calls into Database calls:
+1. Type-1 Driver
+2. Type-2 Driver
+3. Type-3 Driver
+4. Type-4 Driver
+
+
+1. Type-1 Driver:
+    1.Type-1 Driver is used to convert JDBC calls into ODBC calls.
+    2. JDBC calls converts into ODBC Driver Calls by Type-1 Driver, after that ODBC calls are converted into Database calls.
+        That means Type-1 Driver does not directly communicate with Database.So Type-1 Driver does not depend on Database.
+        So we can migrate Database easily.Example from Oracle to MySQL
+    3. Type-1 is available in JDK itself but upto JDK 1.7 version. Henceforth it is removed
+
+    4. Java Application(JDBC) -----> Type-1 Driver (Bridge Driver)  ------> ODBC Driver ------>  Database 
+
+    5. Type-1 Driver is available for Windows Only So it is platform dependent
+
